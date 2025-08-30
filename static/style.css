@@ -1,0 +1,65 @@
+/* ページ全体 */
+body {
+    color: #735E59;           /* 文字色 */
+    font-family: 'Zen Maru Gothic', sans-serif;  /* フォント */
+}
+
+/* タイトル専用フォント＆色 */
+h1 {
+    font-family: 'Unbounded', sans-serif;
+    color: #63514C;
+}
+
+h2 {
+    font-family: 'Unbounded', sans-serif;
+    color: #63514C;
+}
+
+.diary_input {
+    width: 700px;     /* 投稿フォームのサイズ */
+    padding: 10px;
+    font-size: 12px;
+}
+
+.emoji {
+    margin-right: 6px; /* 空白の幅をpxで指定 */
+}
+
+
+.date {
+    color: gray;              /* グレー */
+    font-size: 0.8em;         /* 少し小さめ */
+    margin-left: 8px;         /* 本文との隙間 */
+}
+
+.post {
+    margin-bottom: 12px; /* 投稿ごとの間隔を少し広めに */
+}
+
+
+/* 共通: 横並び */
+.login-form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap; /* 画面が狭いときに自動で折り返す用 */
+}
+
+/* ラベルと入力欄を横並びにする */
+.login-form .form-row {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* スマホ(600px以下)では縦並びに切り替え */
+@media (max-width: 600px) {
+    .login-form {
+        flex-direction: column;
+        align-items: stretch; /* 幅いっぱい */
+    }
+    .login-form button {
+        align-self: flex-start; /* ボタンを左寄せ */
+    }
+}
